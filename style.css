@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color : rgb(30, 30, 30)
+}
+body {
+    background-image: url('bg.png.jpg');
+    background-size: cover;
+    background-color: var(--color);
+    margin-top: 5px;
+}
+
+main {
+    margin-top: 62px;
+}
+
+.btns-right {
+    display: flex;
+    height: fit-content;
+    justify-content: flex-end
+}
+.btns-right .links {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top : 10px;
+    font-size: large;
+}
+.btns-left {
+    font-size: large;
+}
+.left .links {
+    padding-left: 10px;
+    padding-right: 10px
+} 
+#googl, #e{
+    display: inline;
+    color: rgb(231, 229, 229);
+    text-align: center;
+    font-size: 80px;
+    font-family:sans-serif;
+    font-weight: 700;
+}
+#e {
+    display: inline;
+    font-family: sans-serif;
+    position: absolute;
+    transform: rotate(-20deg);
+    transform: translate(-2px);
+    font-style: italic;
+
+}
+.container_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_container_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 40px;
+    border: solid rgb(126, 122, 122);
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+.container_2 input{
+width: 300px;
+background-color: transparent;
+box-shadow: none;
+border-left: 1px solid rgb(0, 0, 0);
+border-right: 1px solid rgb(0, 0, 0);
+border-top: transparent;
+border-bottom: transparent;
+cursor: text;
+color: rgb(214, 205, 205);
+font-size: large;
+padding-inline: 40px;
+height: 35px;
+}
+.container_2 a {
+    background-color: transparent;
+}
+.container_2 a {
+    padding-left: 5px;;
+}
+.container_3 {
+ display: flex;
+ justify-content: center;
+ padding: 35px;
+}
+.container_3 button {
+    padding: 5px 10px;
+    color: white;
+    margin: 10px;
+    font-size: large;
+    background-color: transparent;
+}
+.btns-right a ,.btns-left a {
+    color: white;
+    text-decoration: none;
+}
+.container div a {
+    color: white;
+    text-decoration: none;
+}
+.btns-right :last-child {
+    padding-left: 10px;
+}
+.btns-left :first-child {
+    padding-right: 10px;
+}
+.btns-right #grid {
+    padding-top: 5px;
+}
+.btns-right {
+    margin-right: 15px;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+}

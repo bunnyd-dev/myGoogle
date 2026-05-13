@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="glogo.webp" type="image/png" sizes="100px">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navtag">
+        <div class="btns"></div>
+        <span class="btns-right">
+            <a href="https://mail.google.com/mail/u/0/#inbox" class="links">Gmail</a>
+            <a href="https://www.google.com/imghp?hl=en&ogbl" class="links">Images</a>
+            <a href="https://www.google.co.in/intl/en/about/products" id="grid"><img src="3x3 grid.jpg" alt="More apps" height="30px"></a>
+            <a href="https://myaccount.google.com/?hl=en&utm_source=OGB&utm_medium=act&gar=WzJd" id="logo"><img
+                    src="account_logo.png" alt="Your account logo" height="40px"></a>
+        </span>
+        <span class="btns-left">
+            <a href="https://about.google/?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header">About</a>
+            <a href="https://store.google.com/in/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-GB&pli=1">Store</a>
+        </span>
+    </nav>
+    <main>
+        <div class="container_1">
+            <div>
+                <a href="https://www.google.com">
+                    <p id="googl">Googl</p><span id="e">e</span>
+                </a>
+            </div>
+        </div>
+        <div class="main_container_2" onmouseover="change_bg_color()" onmouseleave="return_default()" onfocus="change_bg_color">
+            <div class="container_2">
+                <input type="text" id="query">
+                <a href=""><img src="mic.png" alt="" height="30px" width="30px"></a>
+                <a href=""><img src="camera.png" alt="" height="30px" width="30px"></a>
+            </div>
+        </div>
+        <div class="container_3">
+            <button class="btn1"><a href="https://www.google.com">Google search</a></button>
+            <button class="btn1"><a href="https://doodles.google/">I'm feeling lucky</a></button>
+        </div>
+    </main>
+    <script>
+        let textbox=document.querySelector('#query');
+function change_bg_color() {
+    textbox.style.borderColor='white';
+    textbox.style.border='2px solid black';
+    textbox.style.color='white'
+}
+function return_default() {
+    textbox.style.borderTopColor='transparent'
+    textbox.style.borderBottomColor='transparent'
+    textbox.style.borderrightColor='black'
+    textbox.style.borderleftColor='black'
+    textbox.style.color='white'
+}
+textbox.addEventListener('keydown', (e)=> {
+    if (e.key=='Enter') {
+        let query = textbox.value;
+        /*let q=prompt('enter your query')*/
+        window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`);
+        window.location.reload()
+    }
+})
+
+</script>
+</body>
+
+</html>
