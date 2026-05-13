@@ -5,8 +5,8 @@
     --color : rgb(30, 30, 30)
 }
 body {
-    background-image: url('bg.png.jpg');
-    background-size: cover;
+    /* background-image: url('bg.png.jpg'); */
+    background-size:auto;
     background-color: var(--color);
     margin-top: 5px;
 }
