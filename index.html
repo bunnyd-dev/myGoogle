@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,10 +20,10 @@
             <a href="https://mail.google.com/mail/u/0/#inbox" class="links">Gmail</a>
             <a href="https://www.google.com/imghp?hl=en&ogbl" class="links">Images</a>
             <a href="https://www.google.co.in/intl/en/about/products" id="grid"><img src="3x3 grid.jpg" alt="More apps" height="30px"></a>
-            <a href="https://myaccount.google.com/?hl=en&utm_source=OGB&utm_medium=act&gar=WzJd" id="logo"><img
-                    src="account_logo.png" alt="Your account logo" height="40px"></a>
+            <a href="https://myaccount.google.com/?hl=en&utm_source=OGB&utm_medium=act&gar=WzJd" id="logo">
+                <img src="account_logo.png" alt="Your account logo" height="40px"></a>
         </span>
-        <span class="btns-left">
+        <span class="btns-left"> 
             <a href="https://about.google/?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header">About</a>
             <a href="https://store.google.com/in/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-GB&pli=1">Store</a>
         </span>
@@ -37,42 +36,69 @@
                 </a>
             </div>
         </div>
-        <div class="main_container_2" onmouseover="change_bg_color()" onmouseleave="return_default()" onfocus="change_bg_color">
+        <div class="main_container_2">
             <div class="container_2">
-                <input type="text" id="query">
+                <input type="text" id="query" onmouseover="change_bg_color()", onmouseleave="return_default()">
                 <a href=""><img src="mic.png" alt="" height="30px" width="30px"></a>
-                <a href=""><img src="camera.png" alt="" height="30px" width="30px"></a>
+                <a href=""><img src="camera.png" alt="" height="30px" width="30px"></a> 
+
+
+                <button type="button" id="AI" onclick = AI_Function()>AI mode</button> 
+               <button  id= "normal" onclick= normal()>X</button>
             </div>
         </div>
         <div class="container_3">
-            <button class="btn1"><a href="https://www.google.com">Google search</a></button>
-            <button class="btn1"><a href="https://doodles.google/">I'm feeling lucky</a></button>
+            <button class="btn1">
+                <a href="https://www.google.com">Google search</a>
+            </button>
+
+            <button class="btn1">
+                <a href="https://doodles.google/">I'm feeling lucky</a>
+            </button>
+
         </div>
     </main>
+
+
     <script>
-        let textbox=document.querySelector('#query');
+        let textbox=document.getElementById('query');
+        let Ai_Btn = document.querySelector('#AI');
+        let AiBtnPressed = false
+        let normal_btn = document.querySelector('#normal')
+        normal_btn.disabled = false
 function change_bg_color() {
     textbox.style.borderColor='white';
-    textbox.style.border='2px solid black';
-    textbox.style.color='white'
+    textbox.style.backgroundColor= 'rgb(50, 50, 50)';
 }
 function return_default() {
-    textbox.style.borderTopColor='transparent'
-    textbox.style.borderBottomColor='transparent'
-    textbox.style.borderrightColor='black'
-    textbox.style.borderleftColor='black'
-    textbox.style.color='white'
+    textbox.style.backgroundColor='rgb(30, 30, 30)';
 }
 textbox.addEventListener('keydown', (e)=> {
     if (e.key=='Enter') {
         let query = textbox.value;
-        /*let q=prompt('enter your query')*/
-        window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`);
+        if (AiBtnPressed){
+            normal_btn.style.backgroundColor = "rgb(255, 255, 255)"
+            window.open(`https://www.perplexity.ai/search/new?q=${encodeURI(query)}`)
+        }
+        /*let q=prompt('enter your query') -> Used for testing.*/
+        else{
+            normal_btn.style.backgroundColor = "rgb('82, 82, 82')"
+            open(`https://www.google.com/search?q=${encodeURI(query)}`);
+        }
         window.location.reload()
+
     }
 })
+function AI_Function(){
+    Ai_Btn.style.backgroundColor = 'rgb(144, 130, 158)';
+    AiBtnPressed = true;
 
-</script>
+}
+function normal(){
+    Ai_Btn.style.backgroundColor = 'rgb(255, 255, 255)';
+    AiBtnPressed = false;
+}
+    </script>
 </body>
 
 </html>

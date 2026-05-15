@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.google.com/share?selection.family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700');
+@import url('https://fonts.google.com/share?selection.family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700|Nova+Round');
 :root {
     --color : rgb(30, 30, 30)
 }
@@ -36,17 +37,15 @@ main {
     display: inline;
     color: rgb(231, 229, 229);
     text-align: center;
-    font-size: 80px;
-    font-family:sans-serif;
-    font-weight: 700;
+    font-size: 120px;
+    font-family: "Google sans", sans-serif;
+    font-weight: 200;
 }
 #e {
     display: inline;
-    font-family: sans-serif;
     position: absolute;
-    transform: rotate(-20deg);
-    transform: translate(-2px);
-    font-style: italic;
+    transform: rotate(-25deg);
+    translate: -7px;
 
 }
 .container_1{
@@ -63,7 +62,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    width: 80%;
+    min-width: 300px;
+    max-width: 800px;
     height: 40px;
     border: solid rgb(126, 122, 122);
     border-top-left-radius: 30%;
@@ -72,7 +73,7 @@ main {
     border-bottom-right-radius: 30%;
 }
 .container_2 input{
-width: 300px;
+width: 50%;
 background-color: transparent;
 box-shadow: none;
 border-left: 1px solid rgb(0, 0, 0);
@@ -127,4 +128,8 @@ a {
     background-color: transparent;
     text-decoration: none;
     color: white;
+}
+#AI:hover {
+    background-color: rgb(179, 224, 218);
+    border-color: aliceblue;
 }
