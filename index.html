@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="pyBOHsgZsesaKYwAN2YCFyYX-HEfIQKvYtrPdk0m24A" />
+    <meta name="description" content="A custom Google search interface project hosted on GitHub Pages.">
+    <meta name="keywords" content="myGoogle, google clone, search engine, github pages    ">
+    <meta name="author" content="bunnyd-dev">
     <title>myGoogle</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,8 +84,9 @@ textbox.addEventListener('keydown', (e)=> {
         if (AiBtnPressed){
             normal_btn.style.backgroundColor = "rgb(255, 255, 255)"
             window.open(`https://www.perplexity.ai/search/new?q=${encodeURI(query)}`)
+            // Im using perplexity because gemini and chatGPT doesn't support URL injection.
         }
-        /*let q=prompt('enter your query') -> Used for testing.*/
+        //let q=prompt('enter your query') -> Used for testing.
         else{
             normal_btn.style.backgroundColor = "rgb('82, 82, 82')"
             open(`https://www.google.com/search?q=${encodeURI(query)}`);
