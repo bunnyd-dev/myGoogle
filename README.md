@@ -1,2 +1,2 @@
 The website is live!
-You can check it on [https://bunnyd-web.github.io](https://bunnyd-dev.github.io/myGoogle)
+You can check it on [myGoogle](https://bunnyd-dev.github.io/myGoogle)
